@@ -44,6 +44,6 @@ def add_images_to_csv(input_filename, output_filename):
             writer.writerow(row)
 
 
-input_file = "data/movies.csv"
-output_file = "data/output_with_images.csv"
+input_file = "../data/movies.csv"
+output_file = "../data/output_with_images.csv"
 add_images_to_csv(input_file, output_file)

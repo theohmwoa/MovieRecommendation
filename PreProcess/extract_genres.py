@@ -12,7 +12,7 @@ def extract_genres(filename):
     return genres_set
 
 if __name__ == '__main__':
-    filename = 'data/small_movies.csv'
+    filename = '../data/small_movies.csv'
     genres = extract_genres(filename)
     print("All unique genres:", genres)
 

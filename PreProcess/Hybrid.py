@@ -3,14 +3,14 @@ from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 import pickle
 
-movies = pd.read_csv('data/small_movies.csv')
+movies = pd.read_csv('../data/small_movies.csv')
 
-ratings = pd.read_csv('data/small_ratings.csv')
+ratings = pd.read_csv('../data/small_ratings.csv')
 
 vectorizer = CountVectorizer(tokenizer=lambda x: x.split('|'))
 genres_matrix = vectorizer.fit_transform(movies['genres'])
 
-model = pickle.load(open('models/svd_model.pkl', 'rb'))
+model = pickle.load(open('../models/svd_model.pkl', 'rb'))
 
 def get_top_n_recommendations(model, user_ratings, top_n=10):
     all_movie_ids = set(movies['movieId'].tolist())

@@ -10,7 +10,7 @@ import itertools
 
 
 def load_ratings():
-    ratings = pd.read_csv('data/ratings.csv')
+    ratings = pd.read_csv('../data/ratings.csv')
     reader = Reader(rating_scale=(0.5, 5))
     data = Dataset.load_from_df(ratings[['userId', 'movieId', 'rating']], reader)
     return data
@@ -43,8 +43,8 @@ def train_best_model(data, param_grid):
     current_time = time.strftime("%Y%m%d-%H%M%S")
     model_filename = f'models/best_svd_model-{current_time}.pkl'
 
-    if not os.path.exists('models'):
-        os.makedirs('models')
+    if not os.path.exists('../models'):
+        os.makedirs('../models')
 
     with open(model_filename, 'wb') as model_file:
         pickle.dump(best_model, model_file)

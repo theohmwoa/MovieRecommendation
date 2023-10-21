@@ -11,7 +11,7 @@ def extract_year(title):
 def calculate_movie_variance(input_csv, chosenGenres, year_threshold, output_csv):
     ratings = pd.read_csv(input_csv)
 
-    movies = pd.read_csv('data/movies.csv')
+    movies = pd.read_csv('../data/movies.csv')
 
     movies['year'] = movies['title'].apply(extract_year)
 
