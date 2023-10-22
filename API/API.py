@@ -13,7 +13,7 @@ def load_model(model_path):
     return model
 
 
-API_KEY = "13ff48a90ad91c9b9b2246a87f9f6cd4"
+API_KEY = "UR_API_KEY"
 TMDB_API_URL = "https://api.themoviedb.org/3/search/movie"
 TMDB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
 
