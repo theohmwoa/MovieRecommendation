@@ -53,9 +53,9 @@ def train_best_model(data, param_grid):
 
 
 param_grid = {
-    'n_epochs': [15],
-    'lr_all': [0.011],
-    'reg_all': [0.1]
+    'n_epochs': [15], #THOSE VALUES SHOULD BE CHANGED I REMOVED THE ONES THAT WORKED FOR ME
+    'lr_all': [0.011], #THOSE VALUES SHOULD BE CHANGED I REMOVED THE ONES THAT WORKED FOR ME
+    'reg_all': [0.1] #THOSE VALUES SHOULD BE CHANGED I REMOVED THE ONES THAT WORKED FOR ME
 }
 
 data = load_ratings()
